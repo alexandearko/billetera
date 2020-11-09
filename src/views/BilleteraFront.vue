@@ -12,7 +12,9 @@
         <button type="button" class="btn btn-danger">Agregar un Egreso</button>
       </p> -->
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-info">Agregar un Ingreso</button>
+        <button type="button" class="btn btn-info" @click="modalIngreso">
+          Agregar un Ingreso
+        </button>
         <button type="button" class="btn btn-danger">Agregar un Egreso</button>
       </div>
     </div>
@@ -27,7 +29,6 @@
 import Resumen from "../components/Resumen";
 import Ingresos from "../components/Ingresos";
 import Egresos from "../components/Egresos";
-import $ from "jquery";
 export default {
   components: {
     Resumen,
@@ -35,9 +36,9 @@ export default {
     Egresos,
   },
   methods: {
-      modalIngreso(){
-          $('#myModal').modal('show')
-      }
+    modalIngreso() {
+      window.$("#egresos").modal("show");
+    },
   },
 };
 </script>

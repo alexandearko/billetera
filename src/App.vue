@@ -1,19 +1,25 @@
 <template>
   <div>
-    <nav-bar/>
+    <nav-bar />
     <billetera-front />
+    <modal-ingreso />
+    <modal-egreso />
   </div>
 </template>
 
 <script>
 import BilleteraFront from "./views/BilleteraFront.vue";
-import NavBar from './components/NavBar'
+import NavBar from "./components/NavBar";
+import ModalIngreso from "./modals/ModalIngreso";
+import ModalEgreso from "./modals/ModalEgreso";
 
 export default {
   name: "App",
   components: {
     BilleteraFront,
-    NavBar
+    NavBar,
+    ModalIngreso,
+    ModalEgreso,
   },
 };
 </script>
